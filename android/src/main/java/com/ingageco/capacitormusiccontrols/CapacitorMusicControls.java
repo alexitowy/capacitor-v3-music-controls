@@ -141,7 +141,7 @@ public class CapacitorMusicControls extends Plugin {
 		try {
 			mAudioManager = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
 			Intent headsetIntent = new Intent("music-controls-media-button");
-			mediaButtonPendingIntent = PendingIntent.getBroadcast(context, 0, headsetIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+			mediaButtonPendingIntent = PendingIntent.getBroadcast(context, 0, headsetIntent, PendingIntent.FLAG_IMMUTABLE);
 			registerMediaButtonEvent();
 		} catch (Exception e) {
 			mediaButtonAccess=false;
